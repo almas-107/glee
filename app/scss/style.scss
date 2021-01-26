@@ -1,7 +1,10 @@
 @import 'vars';
 @import 'reset';
 @import 'global';
+@import 'libs';
 @import 'fonts';
+
+// HEADER
 
 .header {
   padding: 47px 0;
@@ -46,7 +49,7 @@
     width: 51px;
     height: 51px;
     margin-right: 21px;
-    background-color: rgba(#a3bbc8, 0.2);
+    background-color: rgba($bg-color, 0.2);
     border-radius: 50%;
     border: none;
     cursor: pointer;
@@ -80,7 +83,7 @@
     &::before {
       content: '';
       position: absolute;
-      top: 17px;
+      top: 22px;
       left: 41px;
       width: 18px;
       height: 17px;
@@ -117,7 +120,7 @@
     &::before {
       content: '';
       position: absolute;
-      top: 17px;
+      top: 22px;
       right: 41px;
       width: 19px;
       height: 17px;
@@ -137,7 +140,7 @@
     width: 51px;
     height: 51px;
     font-size: 0;
-    background-color: #a3bbc8;
+    background-color: $bg-color;
     border-radius: 50%;
     border: none;
     cursor: pointer;
@@ -161,7 +164,7 @@
 
   &__num {
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 20px;
     display: block;
     width: 16px;
@@ -175,6 +178,289 @@
 
   &__circle {
     right: 35px;
+  }
+}
+
+// SLIDER
+
+.slider {
+  &__item {
+    height: 76vh;
+    background-color: $primary-color;
+  }
+
+  &__box {
+    position: relative;
+    height: 76vh;
+    display: flex;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -10%;
+      width: 58vh;
+      height: 58vh;
+      background-image: linear-gradient(90deg, #fcd7b6 10%, #fff 100%);
+      @extend %bg-set;
+      transform: translateY(-50%);
+      border-radius: 50%;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 45%;  
+    left: 0;
+    max-width: 420px;
+    transform: translateY(-50%);
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @extend %rubik-500;
+    font-size: 72px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: $text-color;
+  }
+
+  &__descr {
+    max-width: 360px;
+    margin-bottom: 65px;
+    @extend %rubik-400;
+    font-size: 18px;
+    color: $text-color;
+  }
+
+  &__btn {
+    position: relative;
+    padding: 25px 100px 20px 28px;
+    @extend %rubik-500;
+    font-size: 15px;
+    color: #fff;
+    background-color: $bg-color;
+    outline: transparent;
+    transition: background-color 0.3s;
+
+    &:focus,
+    &:active,
+    &:hover {
+      background-color: $accent-color;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      right: 20px;
+      width: 22px;
+      height: 9px;
+      background-image: url('../images/icons/arrow-right.svg');
+      @extend %bg-set;
+    }
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  display: flex;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+    & button {
+      width: 29px;
+      height: 29px;
+      @extend %rubik-500;
+      font-size: 11px;
+      color: $text-color;
+      background-color: rgba(#fff, 0.3);
+      border: none;
+      border-radius: 50%;
+      outline: transparent;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      &:focus,
+      &:active,
+      &:hover {
+        background-color: #fff;
+      }
+    }
+
+    & li:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+.slick-track {
+  height: 76vh;
+}
+
+// INFO
+
+.info {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #fef7f0;
+  }
+
+  &__support,
+  &__delivery,
+  &__payment {
+    position: relative;
+    padding: 47px 145px 47px 225px;
+  }
+
+  &__support::before {
+    content: '';
+    position: absolute;
+    top: 45px;
+    left: 150px;
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/icons/24.svg');
+    @extend %bg-set;
+  }
+
+  &__delivery::before {
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: 140px;
+    width: 50px;
+    height: 30px;
+    background-image: url('../images/icons/delivery.svg');
+    @extend %bg-set;
+  }
+
+  &__payment::before {
+    content: '';
+    position: absolute;
+    top: 45px;
+    left: 143px;
+    width: 50px;
+    height: 44px;
+    background-image: url('../images/icons/payment.svg');
+    @extend %bg-set;
+  }
+
+  &__delivery {
+    border: 1px solid #e8e4df;
+    border-top: none;
+    border-bottom: none;
+  }
+
+   &__support::after,
+   &__delivery::after,
+   &__payment::after {
+     content: '';
+      position: absolute;
+      top: 48%;
+      left: 31%;
+      width: 20px;
+      height: 20px;
+      background-color: rgba($bg-color, 0.34);
+      border-radius: 50%
+   }
+
+  &__title {
+    @extend %dmsans-700;
+    line-height: 1.4;
+    color: #414141;
+  }
+
+  &__descr {
+    line-height: 1.4;
+    color: #585858;
+  }
+}
+
+// PRODUCTS
+
+.products {
+  padding-top: 75px;
+  
+  &__title {
+    margin-bottom: 23px;
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  &__button {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__btn {
+    padding: 0;
+    @extend %dmsans-700;
+    color: #8b8b8b;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: transparent;
+    transition: color 0.3s;
+
+    &:focus,
+    &:active,
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 185px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 270px;
+    height: 380px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto 50px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 7px;
+    @extend %dmsans-500;
+    color: $text-color;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__price {
+    margin-bottom: 40px;
+    @extend %dmsans-700;
+    color: $bg-color;
   }
 }
 
@@ -297,7 +583,7 @@
     padding: 0;
     color: #fff;
     border: none;
-    background-color: #a3bbc8;
+    background-color: $bg-color;
     cursor: pointer;
     outline-color: $accent-color;
     transition: background-color 0.5s;
@@ -335,4 +621,3 @@
 
 
 @import 'media';
-
