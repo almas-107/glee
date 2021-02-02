@@ -1,0 +1,133 @@
+.top-slider {
+  &__item {
+    height: 76vh;
+    background-color: $primary-color;
+  }
+
+  // Ниже в 'box' идет height: 76vh; ты спрашивал зачем это если он растягивается на высоту контейнера, он не растягивался на всю высоту, а всего лишь по контенту, в общем и я сделал таким образом. Там проблема в том что контент не вставал с помощью флексов как надо. А марджины схлапывались, не мог им задать auto. Как смог в общем
+
+  &__box {
+    position: relative;
+    height: 76vh;
+    display: flex;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -10%;
+      max-width: 634px;
+      max-height: 634px;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(90deg, #fcd7b6 10%, #fff 100%);
+      transform: translateY(-50%);
+      border-radius: 50%;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 34vh;
+    left: 0;
+    max-width: 420px;
+    transform: translateY(-50%);
+  }
+
+  // Ниже у img фиксированные размеры, я писал тебе на эту тему ты сказал это норм, но я не понимаю когда я могу фиксировать их, а когда не могу. Как разобраться с этой темой ?
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 640px;
+    height: 264px;
+    object-fit: cover;
+    transform: translateY(-50%);
+  }
+
+  &__title {
+    @include line-clamp (2);
+    margin-bottom: 30px;
+    @extend %rubik-500;
+    font-size: 72px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: $text-color;
+  }
+
+  &__descr {
+    @include line-clamp (2);
+    max-width: 360px;
+    margin-bottom: 60px;
+    @extend %rubik-400;
+    font-size: 18px;
+    color: $text-color;
+  }
+
+  &__btn {
+    position: relative;
+    padding: 20px 100px 20px 28px;
+    @extend %rubik-500;
+    font-size: 15px;
+    color: #fff;
+    outline: transparent;
+    background-color: $bg-color;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $accent-color;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      right: 20px;
+      width: 22px;
+      height: 9px;
+      background-image: url('../images/icons/arrow-right.svg');
+      @include bg-set (top center, contain);
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    bottom: 43px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & button {
+      width: 29px;
+      height: 29px;
+      @extend %rubik-500;
+      font-size: 11px;
+      color: $text-color;
+      background-color: rgba(#fff, 0.3);
+      border: none;
+      border-radius: 50%;
+      outline: transparent;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+
+    & li:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .slick-dots .slick-active button {
+    background-color: #fff;
+  }
+
+  // Ниже вопрос был по slick-track, проблема с ним следующая, если я не задаю ему высоту 76vh, то между слайдером и advantages (блоком прям под ним) появляется полосы в 1-2 пикселя, то есть он на один два пикселя больше чем весь слайдер, я не знаю почему так, но когда я задаю ему высоту все решается
+
+  .slick-track {
+    height: 76vh;
+  }
+}

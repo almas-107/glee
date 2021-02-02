@@ -1,0 +1,20 @@
+.clients {
+  padding: 89px 0;
+  background-color: #fef7f0;
+
+  &__list {
+    display: flex;
+    max-width: 1036px;
+    margin: 0 auto;
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+}

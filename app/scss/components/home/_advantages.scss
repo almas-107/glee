@@ -1,0 +1,51 @@
+.advantages {
+  margin-bottom: 60px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fef7f0;
+  }
+
+  &__item {
+    display: flex;
+    width: calc(100%/3);
+    padding: 47px 70px 47px 145px;
+
+    &:not(:last-child) {
+      border-right: 1px solid #e8e4df;
+    }
+  }
+
+  &__support {
+    @include advantages-icon;
+    height: 50px;
+  }
+
+  &__delivery {
+    @include advantages-icon;
+    height: 30px;
+  }
+
+  &__payment {
+    @include advantages-icon;
+    height: 45px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 15px;
+    @extend %dmsans-700;
+    line-height: 1.4;
+    color: #414141;
+    @include line-clamp (1);
+  }
+
+  &__descr {
+    @include line-clamp (2);
+    width: 200px;
+    line-height: 1.4;
+    color: #585858;
+  }
+}

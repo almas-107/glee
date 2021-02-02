@@ -1,0 +1,39 @@
+.video {
+  &__inner {
+    position: relative;
+    height: 47vh;
+    margin-bottom: 105px;
+    @include bg-set (top center, cover);
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 0;
+
+    &:hover::before {
+      -webkit-box-shadow: 0px 0px 0px 14px rgba(163, 187, 200, 0.4);
+      -moz-box-shadow: 0px 0px 0px 14px rgba(163, 187, 200, 0.4);
+      box-shadow: 0px 0px 0px 14px rgba(163, 187, 200, 0.4);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 98px;
+      height: 98px;
+      border-radius: 50%;
+      background-color: $bg-color;
+      background-image: url('../images/icons/play-icon.svg');
+      @include bg-set (center center, auto);
+      box-shadow: 0px 0px 0px 0px transparent;
+      transform: translate(-50%, -50%);
+      transition: box-shadow 0.7s;
+    }
+  }
+}

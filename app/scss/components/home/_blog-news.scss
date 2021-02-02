@@ -1,0 +1,110 @@
+.blog-news {
+  background: linear-gradient(to bottom, #fff 0 67%, rgba($color: #fef7f0, $alpha: 0.8) 67% 78%);
+
+  &__headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 45px;
+  }
+
+  &__all {
+    @extend %dmsans-700;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    &:hover svg {
+      fill: $primary-color;
+    }
+  }
+
+  &__arrow {
+    width: 6px;
+    height: 11px;
+    margin-left: 20px;
+    fill: $default-color;
+    transition: fill 0.3s;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 370px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  &__image {
+    font-size: 0;
+  }
+
+  &__img {
+    width: 370px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 55%;
+    left: 8%;
+    padding: 6px 30px;
+    @extend %dmsans-700;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $bg-color;
+    border-radius: 25px;
+    transition: background-color, color 0.3s;
+
+    &:hover {
+      color: #222933;
+      background-color: $primary-color;
+    }
+  }
+
+  &__box {
+    padding: 10px 30px 25px 30px;
+  }
+
+  &__text {
+    height: 80px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    @extend %dmsans-500;
+    font-size: 18px;
+    border-bottom: 1px solid #000;
+
+    & p {
+      @include line-clamp (3);
+    }
+  }
+
+  &__links {
+    @extend %rubik-500;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #222933;
+
+    & a:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__date {
+    margin-right: 45px;
+    transition: color 0.3s;
+  }
+
+  &__admin {
+    transition: color 0.3s;
+  }
+}

@@ -1,8 +1,18 @@
 $(function name(params) {
-  $('.slider__inner').slick({
+  $('.top-slider__inner').slick({
     dots: true,
     arrows: false
   });
 
-  var mixer = mixitup('.products__content');
+  $('.clients__list').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true
+  });
+  
+  var mixer = mixitup('.products__list');
+  var mixer = mixitup('.design__list');
 });
