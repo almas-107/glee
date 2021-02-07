@@ -19,11 +19,15 @@
     transition: color 0.3s;
 
     &:focus {
-      color: $primary-color;
+      color: $focus-color;
     }
 
     &:hover {
-      color: $primary-color;
+      color: $hover-color;
+    }
+
+    &:active {
+      color: $active-color;
     }
   }
 }
@@ -73,9 +77,11 @@
     top: 50%;
     left: 50%;
     display: block;
+    max-width: 238px;
+    max-height: 206px;
     margin: 0 auto;
     transform: translate(-50%, -50%);
-    object-fit: cover;
+    object-fit: contain;
   }
 
   &__title {
@@ -109,124 +115,49 @@
 
   &__btn {
     position: relative;
-    width: 45px;
-    height: 45px;
     background-color: #fff;
-    border: none;
-    border-radius: 50%;
-    outline: transparent;
-    cursor: pointer;
     transition: background-color 0.3s;
-
-    &--blue {
-      background-color: $bg-color;
-    }
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
 
     &:focus {
-      background-color: $primary-color;
+      background-color: $focus-color;
     }
 
     &:hover {
-      background-color: $primary-color;
+      background-color: $bg-color;
+    }
+
+    &:active {
+      background-color: $active-color;
+    }
+
+    &:focus svg {
+      fill: #fff;
+    }
+
+    &:hover svg {
+      fill: #fff;
+    }
+
+    &:active svg {
+      fill: #fff;
     }
   }
 
   &__bg {
     position: absolute;
-    top: 12px;
-    right: 11px;
+    top: 17px;
+    right: 15px;
     width: 22px;
     height: 20px;
     fill: $bg-color;
-
-    &--white {
-      fill: #fff;
-    }
+    transition: fill 0.3s;
   }
 }
 
-.lighting {
-  margin-bottom: 95px;
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__item {
-    position: relative;
-    flex: 0 1 49%;
-    padding: 90px 0 76px;
-    background-color: $primary-color;
-  }
-
-  &__image {
-    position: absolute;
-    top: -95px;
-    left: 140px;
-  }
-
-  &__inner {
-    max-width: 330px;
-    margin: 0 145px 0 auto;
-
-    &--indent {
-      margin-right: 111px;
-    }
-  }
-
-  &__title {
-    max-width: 250px;
-    margin-bottom: 20px;
-    @extend %dmsans-700;
-    font-size: 26px;
-    color: $text-color;
-    @include line-clamp (2);
-
-    &--indent {
-      margin-bottom: 10px;
-    }
-  }
-
-  &__descr {
-    margin-bottom: 20px;
-    @extend %rubik-400;
-    color: $text-color;
-
-    & p {
-      margin-bottom: 18px;
-      @include line-clamp (1);
-    }
-  }
-
-  &__btn {
-    margin-left: auto;
-  }
+.mixitup-control-active {
+  color: $focus-color;
 }
 
-.btn {
-  position: relative;
-  display: inline-block;
-  padding: 25px 85px 25px 20px;
-  @extend %rubik-500;
-  font-size: 15px;
-  color: $text-color;
-  border: 1px solid #b3b7b5;
-  border-radius: 5px;
-  transition: background-color 0.3s;
 
-  &:hover {
-    background-color: rgba($accent-color, 0.5);
-  }
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    width: 22px;
-    height: 9px;
-    background-image: url('../images/icons/arrow-right blue.svg');
-    @include bg-set (top center, contain);
-  }
-}

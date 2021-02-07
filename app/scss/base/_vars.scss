@@ -4,6 +4,9 @@ $primary-color: #fcd7b6;
 $bg-color: #a3bbc8;
 $text-color: #243f4d;
 $title-color: #191919;
+$hover-color: #ff8282;
+$active-color: #b4a847;
+$focus-color: #447188;
 
 @mixin bg-set ($position, $size) {
   background-position: $position;
@@ -19,10 +22,18 @@ $title-color: #191919;
   text-overflow: ellipsis;
 }
 
+
+@mixin pseudo-element ($top) {
+  content: '';
+  position: absolute;
+  top: $top;
+}
+
 @mixin advantages-icon {
   position: relative;
   display: block;
   width: 50px;
+  height: 50px;
   margin-right: 30px;
   fill: $bg-color;
 }

@@ -1,11 +1,13 @@
 .clients {
-  padding: 89px 0;
+  padding: 90px 0;
   background-color: #fef7f0;
 
-  &__list {
-    display: flex;
-    max-width: 1036px;
-    margin: 0 auto;
+  &__item {
+    & img {
+      max-width: 167px;
+      max-height: 84px;
+      object-fit: contain;
+    }
   }
 
   .slick-track {
@@ -15,6 +17,6 @@
 
   .slick-slide {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
 }

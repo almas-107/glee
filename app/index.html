@@ -12,7 +12,7 @@
     <div class="container">
       <nav class="menu">
         <a class="logo" href="#">
-          <img class="logo__img" src="images/logo.png"alt="logo">
+          <img class="logo__img" src="images/logo.png" alt="logo">
         </a>
 
         <ul class="menu__list">
@@ -49,23 +49,23 @@
         </ul>
 
         <div class="usernav">
-          <button class="usernav__search" type="button">
-            <span class="visually-hidden">Кнопка поиска</span>
+          <button class="btn-circle usernav__search" type="button">
+            <span class="visually-hidden">Search button</span>
           </button>
           <a class="usernav__favorites" href="#">
-            Ссылка на избранные товары
+            Link to selected products
             <span class="usernav__num">
               0
             </span>
           </a>
           <a class="usernav__cart" href="#">
-            Ссылка на корзину
+            Link to shopping cart
             <span class="usernav__num usernav__num--circle">
               0
             </span>
           </a>
-          <button class="usernav__dots" type="button">
-            <span class="visually-hidden">Кнопка дополнительного меню</span>
+          <button class="btn-circle usernav__dots" type="button">
+            <span class="visually-hidden">Additional menu button</span>
           </button>
         </div>
       </nav>
@@ -90,13 +90,10 @@
                   </span>
                   <div class="top-slider__descr">
                     <p>
-                      Dolor sit amet,  consecteturadipisicing elit, sed do   eiusmodtempor incididunt
+                      Dolor sit amet,  consecteturadipisicing elit, sed do eiusmodtempor incididunt
                     </p>
                   </div>
-
-                  <!-- Кнопку не сделал блоком, оставил как есть. Она все равно не такая как нижние, менять нужно и стрелку и размеры, она будет отдельно у меня. -->
-
-                  <a class="top-slider__btn" href="#">
+                  <a class="btn top-slider__btn" href="#">
                     Shop  Now
                   </a>
                 </div>
@@ -155,7 +152,7 @@
       <div class="container">
         <ul class="advantages__list">
           <li class="advantages__item">
-            <svg class="advantages__support">
+            <svg class="advantages__bg">
               <use xlink:href="images/sprite.svg#24"></use>
             </svg>
             <div class="advantages__text">
@@ -170,7 +167,7 @@
           </li>
 
           <li class="advantages__item">
-            <svg class="advantages__delivery">
+            <svg class="advantages__bg advantages__bg--large">
               <use xlink:href="images/sprite.svg#delivery"></use>
             </svg>
             <div class="advantages__text">
@@ -184,7 +181,7 @@
           </li>
 
           <li class="advantages__item">
-            <svg class="advantages__payment">
+            <svg class="advantages__bg">
               <use xlink:href="images/sprite.svg#payment"></use>
             </svg>
             <div class="advantages__text">
@@ -206,31 +203,29 @@
           Products of the week
         </h2>
 
-        <!-- Фильтер работает не так как я задумывал, когда нажимаешь на какую либо из категорий кроме All, пропадает блок design ниже где так же микситап. Причину я не нашел, проверил все как должно было быть, но работает не так как надо -->
-
         <ul class="filter products__filter">
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter="all">
+            <button class="filter__btn products__btn" type="button" data-filter="all">
               All
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".category-a">
+            <button class="filter__btn products__btn" type="button" data-filter=".category-a">
               Furnitures
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".category-b">
+            <button class="filter__btn products__btn" type="button" data-filter=".category-b">
               Chairs
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".category-c">
+            <button class="filter__btn products__btn" type="button" data-filter=".category-c">
               Lighting
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".category-d">
+            <button class="filter__btn products__btn" type="button" data-filter=".category-d">
               Decor
             </button>
           </li>
@@ -242,22 +237,22 @@
               <div class="product__image">
                 <img class="product__img" src="images/products/product1.png" alt="Wooden radio">
               </div>
-              <h3 class="product__title" href="#">Wooden radio</h3>
+              <h3 class="product__title">Wooden radio</h3>
               <p class="product__price"><span>$</span>29.00</p>
 
               <ul class="product__items">
                 <li class="product__item">
-                  <button class="product__btn">
+                  <a class="btn-circle product__btn" href="#">
                     <svg class="product__bg ">
                       <use xlink:href="images/sprite.svg#search-1"></use>
                     </svg>
                     <span class="visually-hidden">Search button</span>
-                  </button>
+                  </a>
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn product__btn--blue">
-                    <svg class="product__bg product__bg--white">
+                  <button class="btn-circle product__btn" type="button">
+                    <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#cart-1"></use>
                     </svg>
                     <span class="visually-hidden">Cart button</span>
@@ -265,7 +260,7 @@
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn">
+                  <button class="btn-circle product__btn" type="button">
                     <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#heart-1"></use>
                     </svg>
@@ -281,22 +276,22 @@
               <div class="product__image">
                 <img class="product__img" src="images/products/product2.png" alt="Wooden chair">
               </div> 
-              <h3 class="product__title" href="#">Wooden chair</h3>
+              <h3 class="product__title">Wooden chair</h3>
               <p class="product__price"><span>$</span>29.00</p>
 
               <ul class="product__items">
                 <li class="product__item">
-                  <button class="product__btn">
+                  <a class="btn-circle product__btn" href="#">
                     <svg class="product__bg ">
                       <use xlink:href="images/sprite.svg#search-1"></use>
                     </svg>
                     <span class="visually-hidden">Search button</span>
-                  </button>
+                  </a>
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn product__btn--blue">
-                    <svg class="product__bg product__bg--white">
+                  <button class="btn-circle product__btn" type="button">
+                    <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#cart-1"></use>
                     </svg>
                     <span class="visually-hidden">Cart button</span>
@@ -304,7 +299,7 @@
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn">
+                  <button class="btn-circle product__btn" type="button">
                     <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#heart-1"></use>
                     </svg>
@@ -320,22 +315,22 @@
               <div class="product__image">
                 <img class="product__img" src="images/products/product3.png" alt="White chair">
               </div>
-              <h3 class="product__title" href="#">White chair</h3>
+              <h3 class="product__title">White chair</h3>
               <p class="product__price"><span>$</span>29.00</p>
 
               <ul class="product__items">
                 <li class="product__item">
-                  <button class="product__btn">
+                  <a class="btn-circle product__btn" href="#">
                     <svg class="product__bg ">
                       <use xlink:href="images/sprite.svg#search-1"></use>
                     </svg>
                     <span class="visually-hidden">Search button</span>
-                  </button>
+                  </a>
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn product__btn--blue">
-                    <svg class="product__bg product__bg--white">
+                  <button class="btn-circle product__btn" type="button">
+                    <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#cart-1"></use>
                     </svg>
                     <span class="visually-hidden">Cart button</span>
@@ -343,7 +338,7 @@
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn">
+                  <button class="btn-circle product__btn" type="button">
                     <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#heart-1"></use>
                     </svg>
@@ -359,22 +354,22 @@
               <div class="product__image">
                 <img class="product__img" src="images/products/product4.png" alt="Retro table">
               </div>
-              <h3 class="product__title" href="#">Retro table</h3>
+              <h3 class="product__title">Retro table</h3>
               <p class="product__price"><span>$</span>29.00</p>
 
               <ul class="product__items">
                 <li class="product__item">
-                  <button class="product__btn">
+                  <a class="btn-circle product__btn" href="#">
                     <svg class="product__bg ">
                       <use xlink:href="images/sprite.svg#search-1"></use>
                     </svg>
                     <span class="visually-hidden">Search button</span>
-                  </button>
+                  </a>
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn product__btn--blue">
-                    <svg class="product__bg product__bg--white">
+                  <button class="btn-circle product__btn" type="button">
+                    <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#cart-1"></use>
                     </svg>
                     <span class="visually-hidden">Cart button</span>
@@ -382,7 +377,7 @@
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn">
+                  <button class="btn-circle product__btn" type="button">
                     <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#heart-1"></use>
                     </svg>
@@ -398,22 +393,22 @@
               <div class="product__image">
                 <img class="product__img" src="images/products/product5.png" alt="Wooden radio">
               </div>
-              <h3 class="product__title" href="#">Wooden radio</h3>
+              <h3 class="product__title">Wooden radio</h3>
               <p class="product__price"><span>$</span>29.00</p>
 
               <ul class="product__items">
                 <li class="product__item">
-                  <button class="product__btn">
+                  <a class="btn-circle product__btn" href="#">
                     <svg class="product__bg ">
                       <use xlink:href="images/sprite.svg#search-1"></use>
                     </svg>
                     <span class="visually-hidden">Search button</span>
-                  </button>
+                  </a>
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn product__btn--blue">
-                    <svg class="product__bg product__bg--white">
+                  <button class="btn-circle product__btn" type="button">
+                    <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#cart-1"></use>
                     </svg>
                     <span class="visually-hidden">Cart button</span>
@@ -421,7 +416,7 @@
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn">
+                  <button class="btn-circle product__btn" type="button">
                     <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#heart-1"></use>
                     </svg>
@@ -437,22 +432,22 @@
               <div class="product__image">
                 <img class="product__img" src="images/products/product6.png" alt="Wooden chair">
               </div>
-              <h3 class="product__title" href="#">Wooden chair</h3>
+              <h3 class="product__title">Wooden chair</h3>
               <p class="product__price"><span>$</span>29.00</p>
 
               <ul class="product__items">
                 <li class="product__item">
-                  <button class="product__btn">
+                  <a class="btn-circle product__btn" href="#">
                     <svg class="product__bg ">
                       <use xlink:href="images/sprite.svg#search-1"></use>
                     </svg>
                     <span class="visually-hidden">Search button</span>
-                  </button>
+                  </a>
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn product__btn--blue">
-                    <svg class="product__bg product__bg--white">
+                  <button class="btn-circle product__btn" type="button">
+                    <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#cart-1"></use>
                     </svg>
                     <span class="visually-hidden">Cart button</span>
@@ -460,7 +455,7 @@
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn">
+                  <button class="btn-circle product__btn" type="button">
                     <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#heart-1"></use>
                     </svg>
@@ -476,22 +471,22 @@
               <div class="product__image">
                 <img class="product__img" src="images/products/product7.png" alt="White chair">
               </div>
-              <h3 class="product__title" href="#">White chair</h3>
+              <h3 class="product__title">White chair</h3>
               <p class="product__price"><span>$</span>29.00</p>
 
               <ul class="product__items">
                 <li class="product__item">
-                  <button class="product__btn">
+                  <a class="btn-circle product__btn" href="#">
                     <svg class="product__bg ">
                       <use xlink:href="images/sprite.svg#search-1"></use>
                     </svg>
                     <span class="visually-hidden">Search button</span>
-                  </button>
+                  </a>
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn product__btn--blue">
-                    <svg class="product__bg product__bg--white">
+                  <button class="btn-circle product__btn" type="button">
+                    <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#cart-1"></use>
                     </svg>
                     <span class="visually-hidden">Cart button</span>
@@ -499,7 +494,7 @@
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn">
+                  <button class="btn-circle product__btn" type="button">
                     <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#heart-1"></use>
                     </svg>
@@ -516,122 +511,122 @@
               <div class="product__image">
                 <img class="product__img" src="images/products/product8.png" alt="Retro table">
               </div>
-              <h3 class="product__title" href="#">Retro table</h3>
+              <h3 class="product__title">Retro table</h3>
               <p class="product__price"><span>$</span>29.00</p>
 
               <ul class="product__items">
                 <li class="product__item">
-                  <button class="product__btn">
+                  <a class="btn-circle product__btn" href="#">
                     <svg class="product__bg ">
                       <use xlink:href="images/sprite.svg#search-1"></use>
                     </svg>
-                    <span class="visually-hidden">Search button</span>
-                  </button>
+                    <span class="visually-hidden">Product details</span>
+                  </a>
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn product__btn--blue">
-                    <svg class="product__bg product__bg--white">
+                  <button class="btn-circle product__btn" type="button">
+                    <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#cart-1"></use>
                     </svg>
-                    <span class="visually-hidden">Cart button</span>
+                    <span class="visually-hidden">Add to cart</span>
                   </button>
                 </li>
 
                 <li class="product__item">
-                  <button class="product__btn">
+                  <button class="btn-circle product__btn" type="button">
                     <svg class="product__bg">
                       <use xlink:href="images/sprite.svg#heart-1"></use>
                     </svg>
-                    <span class="visually-hidden">Favorites button</span>
+                    <span class="visually-hidden">Add to favorites</span>
                   </button>
                 </li>
               </ul>
             </article>
           </li>
         </ul>
-         
       </div>
+    </section>
 
-      <div class="lighting">
+    <div class="lighting">
       <div class="container">
         <ul class="lighting__list">
-
           <li class="lighting__item">
-            <div class="lighting__image">
-              <img class="lighting__img" src="images/products/lamp1.png" alt="Lamp">
-            </div>
-            <div class="lighting__inner">
-              <div class="lighting__text">
-                <h4 class="lighting__title">
-                  Mirum Notare Tellus
-                </h4>
-                <div class="lighting__descr">
-                  <p>LEDCornBulb Lamp 5W 7W 10W 12W 15W E26</ p>
-                  <p>E27LEDCornLight</p>
-                </div>
+            <article class="illumination">
+              <div class="lighting__image">
+                <img class="lighting__img" src="images/products/lamp1.png" alt="Lamp">
               </div>
-              <a class="btn lighting__btn" href="#">
-                View More
-              </a>
-            </div>
+              <div class="lighting__inner">
+                <div class="lighting__text">
+                  <h3 class="lighting__title">
+                    Mirum Notare Tellus
+                  </h3>
+                  <div class="lighting__descr">
+                    <p>LEDCornBulb Lamp 5W 7W 10W 12W 15W E26</p>
+                    <p>E27LEDCornLight</p>
+                  </div>
+                </div>
+                <a class="btn lighting__btn" href="#">
+                  View More
+                </a>
+              </div>
+            </article>
           </li>
 
           <li class="lighting__item">
-            <div class="lighting__image">
-              <img class="lighting__img" src="images/products/lamp2.png" alt="Lamp">
-            </div>
-            <div class="lighting__inner lighting__inner--indent">
-              <div class="lighting__text">
-                <h4 class="lighting__title lighting__title--indent">
-                  Malesuada Tempor Euismod
-                </h4>
-                <div class="lighting__descr">
-                  <p>50W 8000lm Compact Size for HID</p>
-                  <p>StreetLightReplacementLEDCornLight</p>
-                </div>
+            <article class="illumination">
+              <div class="lighting__image">
+                <img class="lighting__img" src="images/products/lamp2.png" alt="Lamp">
               </div>
-              <a class="btn" href="#">
-                View More
-              </a>
-            </div>
+              <div class="lighting__inner">
+                <div class="lighting__text">
+                  <h3 class="lighting__title">
+                    Malesuada Tempor Euismod
+                  </h3>
+                  <div class="lighting__descr">
+                    <p>50W 8000lm Compact Size for HID</p>
+                    <p>StreetLightReplacementLEDCornLight</p>
+                  </div>
+                </div>
+                <a class="btn lighting__btn" href="#">
+                  View More
+                </a>
+              </div>
+            </article>
           </li>
         </ul>
       </div>
     </div>
-    </section>
 
-    <div class="design">
+    <section class="design">
       <div class="container container--sm">
         <h2 class="title design__title">
           New Design
         </h2>
 
-  <!-- Фильтер работает не так как я задумывал, когда нажимаешь на какую либо из категорий кроме All, пропадает блок с продуктами выше где так же микситап. Причину я не нашел, проверил все как должно было быть, но работает не так как надо -->
-
         <ul class="filter design__filter">
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter="all">
+            <button class="filter__btn design__btn" type="button" data-filter="all">
               All
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".category-e">
+            <button class="filter__btn design__btn" type="button" data-filter=".category-e">
               Furnitures
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".category-f">
+            <button class="filter__btn design__btn" type="button" data-filter=".category-f">
               Chairs
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".category-g">
+            <button class="filter__btn design__btn" type="button" data-filter=".category-g">
               Lighting
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".category-h">
+            <button class="filter__btn design__btn" type="button" data-filter=".category-h">
               Decor
             </button>
           </li>
@@ -639,78 +634,102 @@
         
         <ul class="design__list">
           <li class="design__item mix category-h" data-order="9">
-            <h5 class="design__subject">
-              Beat Flat Pendant Black
-            </h5>
-            <span class="design__category">
-              Classic
-            </span>
-            <div class="design__image">
-              <img class="design__img" src="images/design/design1.png" alt="Beat Flat Pendant Black">
-            </div>
+            <article class="soft-furniture">
+              <h3 class="soft-furniture__subject">
+                Beat Flat Pendant Black
+              </h3>
+              <span class="soft-furniture__category">
+                Classic
+              </span>
+              <div class="soft-furniture__image">
+                <img class="soft-furniture__img" src="images/design/design1.png"  alt="Beat Flat Pendant Black">
+              </div>
+              <a class="soft-furniture__link" href="#">Link to upholstered furniture</a>
+            </article>
           </li>
+
           <li class="design__item mix category-f" data-order="10">
-            <h5 class="design__subject">
-              Lampe Sur Pieds Bamboo
-            </h5>
-            <span class="design__category">
-              Classic
-            </span>
-            <div class="design__image">
-              <img class="design__img" src="images/design/design2.png" alt="Lampe Sur Pieds Bamboo">
-            </div>
+            <article class="soft-furniture">
+              <h3 class="soft-furniture__subject">
+                Lampe Sur Pieds Bamboo
+              </h3>
+              <span class="soft-furniture__category">
+                Classic
+              </span>
+              <div class="soft-furniture__image">
+                <img class="soft-furniture__img" src="images/design/design2.png"  alt="Lampe Sur Pieds Bamboo">
+              </div>
+              <a class="soft-furniture__link" href="#">Link to upholstered furniture</a>
+            </article>
           </li>
+
           <li class="design__item mix category-g" data-order="11">
-            <h5 class="design__subject">
-              Rattan Rocking Chair
-            </h5>
-            <span class="design__category">
-              Classic
-            </span>
-            <div class="design__image">
-              <img class="design__img design__img--indent" src="images/design/design3.png" alt="Rattan Rocking Chair">
-            </div>
+            <article class="soft-furniture">
+              <h3 class="soft-furniture__subject">
+                Rattan Rocking Chair
+              </h3>
+              <span class="soft-furniture__category">
+                Classic
+              </span>
+              <div class="soft-furniture__image">
+                <img class="soft-furniture__img design__img--indent" src="images/design/design3.png" alt="Rattan Rocking Chair">
+              </div>
+              <a class="soft-furniture__link" href="#">Link to upholstered furniture</a>
+            </article>
           </li>
+
           <li class="design__item mix category-e" data-order="12">
-            <h5 class="design__subject">
-              Rattan Rocking Chair
-            </h5>
-            <span class="design__category">
-              Classic
-            </span>
-            <div class="design__image">
-              <img class="design__img" src="images/design/design4.png" alt="Rattan Rocking Chair">
-            </div>
+            <article class="soft-furniture">
+              <h3 class="soft-furniture__subject">
+                Rattan Rocking Chair
+              </h3>
+              <span class="soft-furniture__category">
+                Classic
+              </span>
+              <div class="soft-furniture__image">
+                <img class="soft-furniture__img" src="images/design/design4.png"  alt="Rattan Rocking Chair">
+              </div>
+              <a class="soft-furniture__link" href="#">Link to upholstered furniture</a>
+            </article>
           </li>
+
           <li class="design__item mix category-f" data-order="13">
-            <h5 class="design__subject">
-              Rattan Rocking Chair
-            </h5>
-            <span class="design__category">
-              Classic
-            </span>
-            <div class="design__image">
-              <img class="design__img design__img--indent" src="images/design/design5.png" alt="Rattan Rocking Chair">
-            </div>
+            <article class="soft-furniture">
+              <h3 class="soft-furniture__subject">
+                Rattan Rocking Chair
+              </h3>
+              <span class="soft-furniture__category">
+                Classic
+              </span>
+              <div class="soft-furniture__image">
+                <img class="soft-furniture__img soft-furniture__img--indent" src="images/design/design5.png" alt="Rattan Rocking Chair">
+              </div>
+              <a class="soft-furniture__link" href="#">Link to upholstered furniture</a>
+            </article>
           </li>
+
           <li class="design__item mix category-h" data-order="14">
-            <h5 class="design__subject">
-              Lampe Sur Pieds Bamboo
-            </h5>
-            <span class="design__category">
-              Classic
-            </span>
-            <div class="design__image">
-              <img class="design__img" src="images/design/design6.png" alt="Lampe Sur Pieds Bamboo">
-            </div>
+            <article class="soft-furniture">
+              <h3 class="soft-furniture__subject">
+                Lampe Sur Pieds Bamboo
+              </h3>
+              <span class="soft-furniture__category">
+                Classic
+              </span>
+              <div class="soft-furniture__image">
+                <img class="soft-furniture__img" src="images/design/design6.png" alt="Lampe Sur Pieds Bamboo">
+              </div>
+              <a class="soft-furniture__link" href="#">Link to upholstered furniture</a>
+            </article>
           </li>
         </ul>
       </div>
-    </div>
+    </section>
 
     <div class="video">
       <div class="video__inner" style="background-image: url(images/video-bg.jpg)">
-        <a class="video__link" href="https://youtu.be/RFJKQbSZVX0"data-fancybox>Ссылка на видеофайл о мебели
+        <a class="video__link" href="https://youtu.be/RFJKQbSZVX0" data-fancybox>
+          Link to video about furniture
         </a>
       </div>
     </div>
@@ -730,59 +749,83 @@
         </div>
 
         <div class="blog-news__inner">
-          <div class="blog-news__item">
-            <a class="blog-news__image" href="#">
-              <img class="blog-news__img" src="images/interior1.jpg" alt="Interior">blog link
+          <article class="news">
+            <a class="news__image" href="#">
+              <img class="news__img" src="images/interior1.jpg" alt="Interior">blog link
             </a>
-            <a class="blog-news__btn" href="#">
+            <a class="news__btn" href="#">
               News
             </a>
-            <div class="blog-news__box">
-              <div class="blog-news__text">
-                <p>Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-              </div>
-              <div class="blog-news__links">
-                <a class="blog-news__date" href="#">28 January, 2020</a>
-                <a class="blog-news__admin" href="#">By admin</a>
+            <div class="news__box">
+              <h3 class="news__title">
+                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              </h3>
+              <div class="news__links">
+                <svg class="news__icon">
+                  <use xlink:href="images/sprite.svg#calendar"></use>
+                </svg>
+                <time class="news__date">28 January, 2020</time>
+                <a class="news__admin" href="#">
+                  <svg class="news__icon">
+                    <use xlink:href="images/sprite.svg#admin"></use>
+                  </svg>
+                  By admin
+                </a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="blog-news__item">
-            <a class="blog-news__image" href="#">
-              <img class="blog-news__img" src="images/interior2.jpg" alt="Interior">blog link
+          <article class="news">
+            <a class="news__image" href="#">
+              <img class="news__img" src="images/interior2.jpg" alt="Interior">blog link
             </a>
-            <a class="blog-news__btn" href="#">
+            <a class="news__btn" href="#">
               News
             </a>
-            <div class="blog-news__box">
-              <div class="blog-news__text">
-                <p>Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-              <div class="blog-news__links">
-                <a class="blog-news__date" href="#">28 January, 2020</a>
-                <a class="blog-news__admin" href="#">By admin</a>
+            <div class="news__box">
+              <h3 class="news__title">
+                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              </h3>
+              <div class="news__links">
+                <svg class="news__icon">
+                  <use xlink:href="images/sprite.svg#calendar"></use>
+                </svg>
+                <time class="news__date">28 January, 2020</time>
+                <a class="news__admin" href="#">
+                  <svg class="news__icon">
+                    <use xlink:href="images/sprite.svg#admin"></use>
+                  </svg>
+                  By admin
+                </a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="blog-news__item">
-            <a class="blog-news__image" href="#">
-              <img class="blog-news__img" src="images/interior3.jpg" alt="Interior">blog link
+          <article class="news">
+            <a class="news__image" href="#">
+              <img class="news__img" src="images/interior3.jpg" alt="Interior">blog link
             </a>
-            <a class="blog-news__btn" href="#">
+            <a class="news__btn" href="#">
               News
             </a>
-            <div class="blog-news__box">
-              <div class="blog-news__text">
-                <p>Rncididunt ut labore et dolore magna aliqua. Ut enim </p>
-              </div>
-              <div class="blog-news__links">
-                <a class="blog-news__date" href="#">28 January, 2020</a>
-                <a class="blog-news__admin" href="#">By admin</a>
+            <div class="news__box">
+              <h3 class="news__title">
+                Rncididunt ut labore et dolore magna aliqua. Ut enim
+              </h3>
+              <div class="news__links">
+                <svg class="news__icon">
+                  <use xlink:href="images/sprite.svg#calendar"></use>
+                </svg>
+                <time class="news__date">28 January, 2020</time>
+                <a class="news__admin" href="#">
+                  <svg class="news__icon">
+                    <use xlink:href="images/sprite.svg#admin"></use>
+                  </svg>
+                  By admin
+                </a>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </div>
@@ -791,34 +834,34 @@
       <div class="container container--sm">
         <ul class="clients__list">
           <li class="clients__item">
-            <img  src="images/client1.png" alt="client logo">
+            <img src="images/clients-logo/client1.png" alt="clients logo">
           </li>
           <li class="clients__item">
-            <img  src="images/client2.png" alt="client logo">
+            <img src="images/clients-logo/client2.png" alt="clients logo">
           </li>
           <li class="clients__item">
-            <img  src="images/client3.png" alt="client logo">
+            <img src="images/clients-logo/client3.png" alt="clients logo">
           </li>
           <li class="clients__item">
-            <img  src="images/client4.png" alt="client logo">
+            <img src="images/clients-logo/client4.png" alt="clients logo">
           </li>
           <li class="clients__item">
-            <img  src="images/client5.png" alt="client logo">
+            <img src="images/clients-logo/client5.png" alt="clients logo">
           </li>
           <li class="clients__item">
-            <img  src="images/client1.png" alt="client logo">
+            <img src="images/clients-logo/client1.png" alt="clients logo">
           </li>
           <li class="clients__item">
-            <img  src="images/client2.png" alt="client logo">
+            <img src="images/clients-logo/client2.png" alt="clients logo">
           </li>
           <li class="clients__item">
-            <img  src="images/client3.png" alt="client logo">
+            <img src="images/clients-logo/client3.png" alt="clients logo">
           </li>
           <li class="clients__item">
-            <img  src="images/client4.png" alt="client logo">
+            <img src="images/clients-logo/client4.png" alt="clients logo">
           </li>
           <li class="clients__item">
-            <img  src="images/client5.png" alt="client logo">
+            <img src="images/clients-logo/client5.png" alt="clients logo">
           </li>
         </ul>
       </div>
@@ -831,12 +874,12 @@
 
         <div class="footer__column">
           <a class="logo" href="#">
-            <img class="logo__img footer__logo" src="images/logo.png"alt="logo">
+            <img class="logo__img footer__logo" src="images/logo.png" alt="logo">
           </a>
           <address class="footer__contact">
-            <a class="footer__link" href="#"><span>address:</span> 4772 Wines Lane Houston, TX 77032</a>
-            <a class="footer__link" href="tel: +832-347-5843"><span>Telephone:</span>+832-347-5843</a>
-            <a class="footer__link" href="mailto: contact@Glee.com"><span>Email:</span> contact@Glee.com</a>
+            <a class="footer__link" href="#"><span>address:</span>4772 Wines Lane Houston, TX 77032</a>
+            <a class="footer__link" href="tel:+832-347-5843"><span>Telephone:</span>+832-347-5843</a>
+            <a class="footer__link" href="mailto:contact@Glee.com"><span>Email:</span>contact@Glee.com</a>
           </address>
         </div>
 
@@ -867,7 +910,6 @@
           <span class="footer__title">
             Account
           </span>
-
           <ul class="footer__list">
             <li class="footer__item">
               <a class="footer__link" href="">Your Account</a>
@@ -892,7 +934,7 @@
             Subscribe by our newsletter and get update protidin.
           </p>
           <form class="footer__form">
-            <input class="footer__input" id="footer" type="email" placeholder="Email address">
+            <input class="footer__input" id="footer" type="email" placeholder="Email address" name="email">
             <label class="footer__label" for="footer">
               <span class="visually-hidden">Email address</span>
             </label>
@@ -930,9 +972,8 @@
         </ul>
       </div>
     </div>
-  </footer>
+  </footer> 
   
-
   <script src="js/main.min.js"></script>
 </body>
 </html>

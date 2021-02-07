@@ -1,8 +1,8 @@
 .video {
   &__inner {
     position: relative;
-    height: 47vh;
-    margin-bottom: 105px;
+    height: 46vh;
+    margin-bottom: 110px;
     @include bg-set (top center, cover);
   }
 
@@ -15,9 +15,7 @@
     font-size: 0;
 
     &:hover::before {
-      -webkit-box-shadow: 0px 0px 0px 14px rgba(163, 187, 200, 0.4);
-      -moz-box-shadow: 0px 0px 0px 14px rgba(163, 187, 200, 0.4);
-      box-shadow: 0px 0px 0px 14px rgba(163, 187, 200, 0.4);
+      box-shadow: 0 0 0 14px rgba(163, 187, 200, 0.4);
     }
 
     &::before {
@@ -31,7 +29,7 @@
       background-color: $bg-color;
       background-image: url('../images/icons/play-icon.svg');
       @include bg-set (center center, auto);
-      box-shadow: 0px 0px 0px 0px transparent;
+      box-shadow: 0 0 0 0 transparent;
       transform: translate(-50%, -50%);
       transition: box-shadow 0.7s;
     }

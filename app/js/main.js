@@ -13,6 +13,16 @@ $(function name(params) {
     autoplay: true
   });
   
-  var mixer = mixitup('.products__list');
-  var mixer = mixitup('.design__list');
+  var mixer = mixitup('.products__list', {
+    selectors: {
+      control: '.products__btn'
+    }
+  });
+
+
+  var mixer = mixitup('.design__list', {
+    selectors: {
+      control: '.design__btn'
+    }
+  });
 });

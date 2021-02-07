@@ -35,3 +35,35 @@ body {
   color: $title-color;
   text-align: center;
 }
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 21px 85px 21px 20px;
+  @extend %rubik-500;
+  font-size: 15px;
+  color: $text-color;
+  border: 1px solid #b3b7b5;
+  border-radius: 5px;
+  outline: transparent;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgba($hover-color, 0.5);
+  }
+
+  &:active {
+    background-color: rgba($active-color, 0.5);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 22px;
+    height: 9px;
+    background-image: url('../images/icons/arrow-right-blue.svg');
+    @include bg-set (top center, contain);
+  }
+}

@@ -11,30 +11,24 @@
   &__item {
     display: flex;
     width: calc(100%/3);
-    padding: 47px 70px 47px 145px;
+    padding: 47px 145px 47px 130px;
 
     &:not(:last-child) {
       border-right: 1px solid #e8e4df;
     }
   }
 
-  &__support {
+  &__bg {
     @include advantages-icon;
-    height: 50px;
-  }
 
-  &__delivery {
-    @include advantages-icon;
-    height: 30px;
-  }
-
-  &__payment {
-    @include advantages-icon;
-    height: 45px;
+    &--large {
+      width: 70px;
+    }
   }
 
   &__title {
     display: block;
+    width: 215px;
     margin-bottom: 15px;
     @extend %dmsans-700;
     line-height: 1.4;
@@ -44,7 +38,7 @@
 
   &__descr {
     @include line-clamp (2);
-    width: 200px;
+    width: 215px;
     line-height: 1.4;
     color: #585858;
   }

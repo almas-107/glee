@@ -1,0 +1,72 @@
+.lighting {
+  margin-bottom: 95px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex: 0 1 49%;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 80px;
+    left: 140px;
+  }
+
+  &__img {
+    max-width: 233px;
+    max-height: 405px;
+    object-fit: contain;
+  }
+
+  // Ниже высоту контейнеру задал для того чтобы контент смотрелся симетричнее относительно друг друга, так как высота задается количеством контента, а контент разный в них
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 330px;
+    min-height: 227px;
+    margin: 0 110px 0 auto;
+  }
+
+  &__title {
+    max-width: 250px;
+    margin-bottom: 20px;
+    @extend %dmsans-700;
+    font-size: 26px;
+    color: $text-color;
+    @include line-clamp (2);
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+    @extend %rubik-400;
+    color: $text-color;
+
+    & p {
+      margin-bottom: 18px;
+      @include line-clamp (1);
+    }
+  }
+
+  // Ниже ширину кнопке я задал осознанно, потому что она растягивается на всю ширину контейнера при флексах, а флекс применен для растягивания по высоте контента, чтоб кнопки были всегда на одном уровне
+
+  &__btn {
+    max-width: 182px;
+  }
+}
+
+  // Ниже стили для article, я сделал его отдельным блоком как того требует переиспользуемый элеммент, но фиксировать ширину я ему не стал, так как в макете нет больше таких элемментов. Я пробовал выносить его за пределы списка и он растягивается на всю ширину, но паддинги и бэкграунд я задал именно для article дабы при выносе смотрелось хоть сколько то адекватно. Либо можно было сделать этот блок не списком тогда его можно будет переиспользовать. Если так лучше ты скажи я переделаю.
+
+.illumination {
+  position: relative;
+  padding: 80px 0 80px;
+  background-color: $primary-color;
+}
+
+
+

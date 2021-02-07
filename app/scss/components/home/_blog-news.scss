@@ -1,5 +1,7 @@
+// Ниже градиентом задан бэкграунд
+
 .blog-news {
-  background: linear-gradient(to bottom, #fff 0 67%, rgba($color: #fef7f0, $alpha: 0.8) 67% 78%);
+  background-image: linear-gradient(to bottom, #fff 0 67%, rgba($color: #fef7f0, $alpha: 1) 67% 78%);
 
   &__headline {
     display: flex;
@@ -13,11 +15,19 @@
     transition: color 0.3s;
 
     &:hover {
-      color: $primary-color;
+      color: $hover-color;
+    }
+
+    &:active {
+      color: $active-color;
     }
 
     &:hover svg {
-      fill: $primary-color;
+      fill: $hover-color;
+    }
+
+    &:active svg {
+      fill: $active-color;
     }
   }
 
@@ -34,22 +44,26 @@
     justify-content: space-between;
     align-items: center;
   }
+}
 
-  &__item {
-    position: relative;
-    max-width: 370px;
-    border-radius: 10px;
-    background-color: #fff;
-  }
+// Ты говорил что не у картинки, а у карточки скругленные углы, но когда так задаешь стили только карточке при изменении картинки она встает с без скругления, поэтому скругление теперь и там и там, так работает хорошо
+
+.news {
+  position: relative;
+  max-width: 370px;
+  border-radius: 7px 7px 0 0;
+  background-color: #fff;
+  
 
   &__image {
     font-size: 0;
   }
 
   &__img {
-    width: 370px;
-    height: 250px;
-    object-fit: cover;
+    max-width: 370px;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 7px 7px 0 0;
   }
 
   &__btn {
@@ -67,44 +81,62 @@
 
     &:hover {
       color: #222933;
-      background-color: $primary-color;
+      background-color: $hover-color;
     }
+
+     &:active {
+       color: #fff;
+       background-color: $active-color;
+     }
   }
 
   &__box {
     padding: 10px 30px 25px 30px;
   }
 
-  &__text {
-    height: 80px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+  &__title {
+    height: 70px;
+    margin-bottom: 10px;
     @extend %dmsans-500;
     font-size: 18px;
-    border-bottom: 1px solid #000;
-
-    & p {
-      @include line-clamp (3);
-    }
+    @include line-clamp (3);
   }
 
   &__links {
+    padding-top: 19px;
     @extend %rubik-500;
     font-size: 12px;
     text-transform: uppercase;
     color: #222933;
-
-    & a:hover {
-      color: $primary-color;
-    }
+    border-top: 1px solid #e0e0e0;
   }
 
   &__date {
-    margin-right: 45px;
+    margin-right: 20px;
     transition: color 0.3s;
   }
 
   &__admin {
     transition: color 0.3s;
+
+    &:hover {
+      color: $hover-color;
+    }
+    &:active {
+      color: $active-color;
+    }
+    &:hover svg {
+      fill: $hover-color;
+    }
+    &:active svg {
+      fill: $active-color;
+    }
+  }
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    transition: fill 0.3s;
   }
 }
